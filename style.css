@@ -1,38 +1,71 @@
-body {
-  background-image: url("https://images.unsplash.com/photo-1521207418485-99c705420785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  margin: 0;
-  display: flexbox;
+body {
+  background: #1f1f1f;
+}
+
+:root {
+  --main-color: #1b1b1b;
+  --secondary-color: #112fa7;
+}
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url(./assets/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+.links {
+  display: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 125%;
+  padding: 1rem 0rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  width: 1.5rem;
+  line-height: 0.5rem;
+}
+
+.logo h1 {
+  font-family: "ubuntu-regular", sans-serif;
+  flex-direction: row;
+  display: flex;
+  line-height: 1.5rem;
+}
+
+.logo img {
+  height: 150px;
+  width: 120px;
+  line-height: 0%;
+}
+
+.front-page {
+  min-height: 100vh;
+  background: rgb(243, 241, 240);
+}
+
+.point1 {
+  background-color: #112fa7;
+  font-family: "ubuntu-regular", sans-serif;
   justify-content: center;
   text-align: center;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  font-family: sans-serif;
+  color: #c1c3c8;
 }
 
-.btn {
-  margin: 40px;
-  height: 250px;
-  width: 250px;
-  font-size: 30px;
-  border-radius: 30px;
-  overflow: hidden;
-  cursor: pointer;
-  text-align: center;
-  border-width: 4px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
-  background-color: rgba(112, 128, 144, 0.35);
+.point1 h2 {
+  font-size: 1.5rem;
 }
 
-.btn:active {
-  transform: translateY(0.1em);
-}
-
-.btn:hover {
-  background-color: rgba(112, 128, 144, 0.65);
+.point1 h4 {
+  font-size: 0.8rem;
+  letter-spacing: 1.7px;
 }
