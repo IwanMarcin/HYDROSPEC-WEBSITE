@@ -3,9 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html,
 body {
-  background: #1f1f1f;
+  height: 100%;
+}
+body {
+  background: #2d2d2d;
+  padding: 5%;
 }
 
 :root {
@@ -31,41 +35,44 @@ h2 {
 .logo {
   display: flex;
   align-items: center;
-  width: 1.5rem;
   line-height: 0.5rem;
-}
-
-.logo h1 {
-  font-family: "ubuntu-regular", sans-serif;
-  flex-direction: row;
-  display: flex;
-  line-height: 1.5rem;
+  flex-direction: column;
 }
 
 .logo img {
-  height: 150px;
-  width: 120px;
-  line-height: 0%;
+  display: flex;
+  padding: 10px;
+}
+
+.logo h2 {
+  color: rgb(255, 255, 255);
+  font-family: "ubuntu-regular";
 }
 
 .front-page {
   min-height: 100vh;
-  background: rgb(243, 241, 240);
 }
 
 .point1 {
-  background-color: #112fa7;
-  font-family: "ubuntu-regular", sans-serif;
+  margin-top: 25vh;
+  font-family: "ubuntu-regular";
   justify-content: center;
-  text-align: center;
-  color: #c1c3c8;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 4px 12px black;
 }
 
 .point1 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .point1 h4 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 1.7px;
+  line-height: 125%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
