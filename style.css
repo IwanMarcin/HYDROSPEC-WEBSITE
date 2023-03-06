@@ -105,20 +105,23 @@ nav svg {
 .phone {
   background-color: rgba(255, 255, 255, 0.4);
   color: #ffffff;
+  font-size: 1rem;
   text-decoration: none;
-  margin-top: 25vh;
-  display: flex;
   text-align: center;
   justify-content: center;
   font-family: "ubuntu-regular";
-  font-weight: 700;
+  font-weight: 500;
   border-color: black;
   border-style: solid;
-  border-radius: 30px;
-  letter-spacing: 1.7px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  border-radius: 1rem;
+  padding: 0.5rem;
   text-shadow: 0px 4px 12px black;
+  margin-top: 15%;
+}
+
+.phone a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .turniejowa {
@@ -185,4 +188,25 @@ nav svg {
   width: 100%;
   margin-top: 2rem;
   border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 10%;
+  }
+  .photos {
+    display: flex;
+    gap: 2rem;
+  }
+  .about {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+  .story {
+    width: 50%;
+  }
+  .about img {
+    width: 50%;
+  }
 }

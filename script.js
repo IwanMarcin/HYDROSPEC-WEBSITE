@@ -15,3 +15,17 @@ burger.addEventListener("click", () => {
   }
   burger.classList.toggle("active");
 });
+
+const photos = gsap.utils.toArray(".photo");
+gsap.set(photos, { opacity: 0 });
+photos.forEach((photo) => {
+  ScrollTrigger.create({
+    trigger: photo,
+    start: "top center",
+    end: "bottom center",
+    markers: true,
+    onEnter: () => {
+      gsap.to(photo, { opacity: 1 });
+    },
+  });
+});
