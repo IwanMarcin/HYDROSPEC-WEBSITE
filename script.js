@@ -23,9 +23,13 @@ photos.forEach((photo) => {
     trigger: photo,
     start: "top center",
     end: "bottom center",
-    markers: true,
     onEnter: () => {
       gsap.to(photo, { opacity: 1 });
     },
   });
 });
+
+document.querySelector(".links").onclick = function () {
+  gsap.to(".links", { x: "0%" });
+  gsap.set("body", { overflow: "auto" });
+};
