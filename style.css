@@ -4,6 +4,7 @@
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
 html,
 body {
   height: 100%;
@@ -11,8 +12,8 @@ body {
 }
 body {
   padding: 5%;
-  position: relative;
   overflow-x: hidden;
+  position: absolute;
 }
 
 :root {
@@ -171,7 +172,10 @@ nav svg {
 }
 
 .about {
+  justify-content: center;
+  padding-top: 5%;
   color: rgb(18, 2, 2);
+  padding-bottom: 5%;
 }
 
 .about h2 {
@@ -180,15 +184,46 @@ nav svg {
 }
 
 .about p {
+  text-align: center;
   line-height: 150%;
   font-family: "ubuntu-regular";
   font-size: 1.2rem;
 }
 
-.about img {
-  width: 100%;
-  margin-top: 2rem;
-  border-radius: 1rem;
+.gallery {
+  left: 50%;
+  transform: translate(10%);
+  display: flex;
+}
+
+.gallery-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-img img {
+  width: 150px;
+  height: 275px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+.gallery-img img:hover {
+  opacity: 1;
+}
+
+.images-container img:hover {
+  transform: scale(1);
+  cursor: zoom-in;
+}
+
+.gallery-img :last-child {
+  padding-bottom: 0px;
+}
+
+.images-container img {
+  width: 1200px;
+  height: 1100px;
 }
 
 @media screen and (min-width: 768px) {
@@ -201,8 +236,6 @@ nav svg {
   }
   .about {
     display: flex;
-    gap: 2rem;
-    justify-content: space-between;
   }
   .story {
     width: 50%;
