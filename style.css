@@ -190,40 +190,23 @@ nav svg {
   font-size: 1.2rem;
 }
 
-.gallery {
-  left: 50%;
-  transform: translate(10%);
-  display: flex;
+.galeria {
+  overflow-x: auto;
 }
 
-.gallery-img {
-  display: flex;
-  flex-direction: column;
+.carousel-container {
+  width: 60%;
+  overflow: hidden;
+  border: 5px solid black;
+  position: relative;
+  aspect-ratio: 3/4;
+  height: 500px;
 }
 
-.gallery-img img {
-  width: 150px;
-  height: 275px;
-  padding-bottom: 5px;
-  padding-right: 5px;
-}
-
-.gallery-img img:hover {
-  opacity: 1;
-}
-
-.images-container img:hover {
-  transform: scale(1);
-  cursor: zoom-in;
-}
-
-.gallery-img :last-child {
-  padding-bottom: 0px;
-}
-
-.images-container img {
-  width: 1200px;
-  height: 1100px;
+.carousel-slide {
+  display: ;
+  width: 100%;
+  height: 500px;
 }
 
 @media screen and (min-width: 768px) {
@@ -246,5 +229,9 @@ nav svg {
 
   .phone {
     display: none;
+  }
+
+  .carousel-container {
+    width: 100%;
   }
 }
