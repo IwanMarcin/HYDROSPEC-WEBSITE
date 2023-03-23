@@ -190,23 +190,17 @@ nav svg {
   font-size: 1.2rem;
 }
 
-.galeria {
-  overflow-x: auto;
-}
-
-.carousel-container {
-  width: 60%;
+.gallery-container {
+  width: 30rem;
+  height: 40rem;
+  border: 0.25rem solid black;
   overflow: hidden;
-  border: 5px solid black;
-  position: relative;
-  aspect-ratio: 3/4;
-  height: 500px;
-}
-
-.carousel-slide {
-  display: ;
-  width: 100%;
-  height: 500px;
+  background-image: url("./assets/gallery/gallery1.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  margin: auto;
+  vertical-align: middle;
 }
 
 @media screen and (min-width: 768px) {
@@ -229,9 +223,5 @@ nav svg {
 
   .phone {
     display: none;
-  }
-
-  .carousel-container {
-    width: 100%;
   }
 }

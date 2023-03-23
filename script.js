@@ -34,41 +34,33 @@ document.querySelector(".links").onclick = function () {
   gsap.set("body", { overflow: "auto" });
 };
 
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
+let changePhoto = document.getElementById("obrazek");
 
-const prevBtn = document.querySelector("#prevBtn");
-const nextBtn = document.querySelector("#nextBtn");
+changePhoto.style.backgroundImage = "url('./assets/gallery/gallery1.avif')";
 
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-
-nextBtn.addEventListener("click", () => {
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  console.log(counter);
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
-
-prevBtn.addEventListener("click", () => {
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter--;
-  console.log(counter);
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
-
-carouselSlide.addEventListener("transitionend", () => {
-  if (carouselImages[counter].id === "lastClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+let first = "url('./assets/gallery/gallery1.avif')";
+let second = "url('./assets/gallery/gallery2.avif')";
+let third = "url('./assets/gallery/gallery3.avif')";
+let fourth = "url('./assets/gallery/gallery4.avif')";
+let counter2 = 1;
+function updatePhoto() {
+  if (counter2 === 1) {
+    changePhoto.style.backgroundImage = first;
+    console.log("hej");
+    counter2 += 1;
+  } else if (counter2 === 2) {
+    changePhoto.style.backgroundImage = second;
+    counter2 += 1;
+  } else if (counter2 === 3) {
+    changePhoto.style.backgroundImage = third;
+    counter2 += 1;
+  } else if (counter2 === 4) {
+    changePhoto.style.backgroundImage = fourth;
+    counter2 = 1;
   }
+  setTimeout(() => {
+    updatePhoto();
+  }, 5000);
+}
 
-  if (carouselImages[counter].id === "firstClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-  }
-});
+updatePhoto();
